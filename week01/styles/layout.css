@@ -36,7 +36,7 @@ aside {
 
 footer {
     justify-items: center;
-    color: rgb(255, 240, 221);
+    color: rgba(17, 81, 25, 0.724);
     grid-column: 1/4;
     background-color: rgba(0, 100, 0, 0.352);
 }
