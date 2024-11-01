@@ -134,7 +134,7 @@ main{
     background-color: hwb(305 73% 23% / 0.349);
 }
 
-.card2>h2 {
+.card2>h3 {
     color:var(--primary-color);
 }
 
