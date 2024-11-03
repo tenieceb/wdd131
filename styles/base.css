@@ -104,7 +104,6 @@ main{
 
 
 #headshot {
-    width: 400px 578px;
     grid-column: 2;
     grid-row: 2;
     align-self: center;
