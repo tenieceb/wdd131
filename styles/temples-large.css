@@ -1,0 +1,20 @@
+@media screen and (min-width: 500px)
+{
+    header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	nav {
+		justify-content: flex-end;
+		flex-direction: row;
+	}
+	nav a {
+		flex: 1 1 100%;
+	}
+
+    #figures{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
