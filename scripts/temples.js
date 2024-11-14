@@ -1,17 +1,61 @@
-const pageTitle = document.getElementById('output');
-const navigationName = document.getElementById("nav1");
-const navigationHome = document.getElementById('home');
-const navigationOld = document.getElementById('old');
-const navigationNew = document.getElementById('new');
-const navigationLarge = document.getElementById('large');
-const navigationSmall = document.getElementById('small');
+let home = document.getElementById( "home" );
+let old = document.getElementById( "old");
+let newLink = document.getElementById( "new");
+let large = document.getElementById( "large");
+let small = document.getElementById( "small");
+
+let pageHeading = document.getElementById("output");
 
 
-
-function copyTitle(){
-    const navigationName = document.getElementById('nav1');
-
-    pageTitle.innerhtml = navigationName.value;
+function getPageTitle(id){
+    if (id == "home")
+    {
+        pageHeading.innerHTML = "Home";
+    }
+    else if (id == "old")
+    {
+        pageHeading.innerHTML="Old";
+    }
+    else if (id == "new")
+    {
+        pageHeading.innerHTML="New";
+    }
+    else if (id == "large")
+    {
+        pageHeading.innerHTML="Large";
+    }        
+    else if (id == "small")
+    {
+        pageHeading.innerHTML="Small";
+    }
 }
 
-navigationName.addEventListener('click', copyTitle);
+home.addEventListener('click', function(){
+    getPageTitle('home');
+
+})
+
+old.addEventListener('click', function(){
+    getPageTitle('old');
+})
+
+newLink.addEventListener('click', function(){
+    getPageTitle('new');
+})
+
+large.addEventListener('click', function(){
+    getPageTitle('large');
+})
+
+small.addEventListener('click', function(){
+    getPageTitle('small');
+})
+
+
+const mainNav = document.querySelector(".nav1");
+const hamburgerButton = document.getElementById("menu");
+
+hamburgerButton.addEventListener('click',() =>{
+    mainNav.classList.toggle('show');
+    hamburgerButton.classList.toggle('show');
+})

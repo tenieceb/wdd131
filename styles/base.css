@@ -37,9 +37,10 @@ header {
     padding: 20px 0 0 0;
 }
 
-header h1 {
+h1 {
     display: inline-flex;
-    margin-bottom: 50px;    
+    margin-bottom: 50px;
+    margin-left: 50px;
 }
 
 header h2, h2, h3{
