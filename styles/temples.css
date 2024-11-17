@@ -97,7 +97,6 @@ footer {
 
 .show a{
     display:flex;
-    flex-direction: column;
 }
 
 #menu.show::before{
