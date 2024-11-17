@@ -15,15 +15,16 @@
 
 body{
     font-family: var(--secondary-font);
-    width: auto;
 }
 
-h1, h2,h3 {
+h1, h2,h3, figcaption {
     font-family: var(--main-font);
     color:var(--primary-color);
 }
 
 header {
+    position:relative;
+    width: 100% ;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 2fr 1fr;
@@ -34,9 +35,10 @@ header {
 
 h1 {
     padding-left: 5px;
+    text-align: center;
 }
 
-h2 {
+h2, figcaption {
     text-align: center;
 }
 
@@ -46,7 +48,7 @@ h2 {
     color: var(--nav-link-color);
     text-decoration:none;
     padding: 1rem;
-    text-align: center;
+    text-align: center; 
 }
 
 nav a:link, nav a:visited {
@@ -97,8 +99,20 @@ footer {
 
 .show a{
     display:flex;
+    align-items: flex-end;
 }
 
 #menu.show::before{
     content:"X";
 }
+
+img {
+    width: 100%;
+    box-shadow: 8px 8px 10px var(--accent3-color);
+        
+}
+
+figcaption{
+    padding-top: 10px;
+}
+
