@@ -1,27 +1,83 @@
-.roboto-thin {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .roboto-regular {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .roboto-bold {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  #005eb8
-  rgb(0, 94, 184)
-  hsl(209, 100%, 36%)
-
-  and whhite
-
 :root {
-    
+    --primary-color: hsl(209, 100%, 36%);
+    --secondary-color: white;
+    --tirtiary-color: hsla(209, 100%, 36%, 0.612);
+    --main-font: "Roboto", sans-serif;
+    --fontweight-thin: 100;
+    --fontweight-bold: 700;
+}
+
+body{
+    display:block;
+    margin:  0 auto;
+}
+
+header{
+    background-color: var(--primary-color);
+}
+
+header p {
+    background-image: url('/images/lindsay-tartan.svg');
+    background-size:100%;
+    height: 35px;
+}
+
+h1{
+    color: var(--secondary-color);
+    font-weight: var(--fontweight-bold);
+    text-align: center;
+    padding-top:30px;
+    text-shadow: 1px 1px 2px black;
+}
+
+.hero img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+#data, #weather{
+    display:flex;
+    text-align: center;
+    border: 5px var(--tirtiary-color) solid;
+    flex-direction: column;
+}
+
+#data h2, #weather h2{
+    border-bottom: 3px var(--tirtiary-color) solid;
+    padding: 15px;
+    margin: 0;
+}
+
+.information{
+    display:grid;
+    grid-template-columns: 1fr 1.5fr;
+    justify-items: center;
+    align-items:center;
+    font-weight: var(--fontweight-thin);
+}
+
+.information h3{
+    grid-column: 1;
+    justify-self: end;
+    margin: 5px;
+}
+
+.information p{
+    grid-column: 2;
+    margin: 5px;
+}
+
+#weather img{
+    width: 3rem;
+    align-self: center;
+}
+
+footer {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: var(--primary-color);
+    text-align: center;
+    font-family: var(--fontweight-thin);
+    color:var(--secondary-color);
 }
