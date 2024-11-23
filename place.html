@@ -1,24 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Teniece Busenbark">
-    <meta name="description" content="Facts about Scotland">
-    <link rel="stylesheet" href="styles/place.css">
-    <link rel="stylesheet" href="styles/place-large.css">
-    <script src="scripts/place.js" defer ></script>
-    <script src="scripts/getdates.js" defer></script>
-    <!-- Insert font links here - ->
-    <title>WDD</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="Teniece Busenbark">
+        <meta name="description" content="Facts about Scotland">
+        <title>Facts about Scotland</title>
+        <link rel="stylesheet" href="styles/place.css">
+        <link rel="stylesheet" href="styles/place-large.css">
+        <script src="scripts/place.js" defer ></script>
+        <script src="scripts/getdates.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>Scotland</h1>
+            <img src="images/lindsay-tartan.webp" alt="Lindsay Clan Tartan">
+        </header>
+        <main>
+            <div>
+                <picture id="hero">
+                    <source srcset="images/hero-large.webp" alt="Glencoe, Scotland grassy lake shore with bushes and mountains with fog behind it" media="min-width: 1000px">
+                    <img src="images/hero-small.webp" alt="Woman playing bagpipes." width="300" >
+                </picture>
+            </div>
+            <section id="data">
+                <h2>Data</h2>
+                <div class="information" id="data-info">
+                    <h3>Area:</h3>
+                        <p>	80,231 sq km</p>
+                    <h3>Population:</h3>
+                        <p>5,439,842</p>
+                    <h3>Capital:</h3>
+                        <p>Edinburg</p>
+                    <h3>Languages:</h3>
+                        <p id="languages"> 
+                            English<br>
+                            Scots<br>
+                            Scottish Gaelic<br>
+                            British Sign Language
+                        </p>
+                    <h3>Currency:</h3>
+                        <p>Pound sterling (£)</p>
+                    <h3>Time Zone:</h3>
+                        <p>UTC+0</p>
+                    <h3>Calling Code:</h3>
+                        <p>+44</p>
+                    <h3>Internet TLD:</h3>
+                        <p>.scot</p>
+                </div>
+            </section>
+            <section id="weather">
+                <h2>Weather</h2>
+                <img src="images/mobile-weather-icon.svg" alt="Weather ion depicted with a sun behind a cloud" >
+                <div class= "information" id="weather-info">
+                    <h3>Temperature:</h3>
+                        <p id="temp">7 °C</p>
+                    <h3>Conditions:</h3>
+                        <p id="conditions">Partly Cloudy</p>
+                    <h3>Wind:</h3>
+                        <p id="wind">10 km/h</p>
+                    <h3>Wind Chill:</h3>
+                        <p id="windchill"></p>
+                </div>
+            </section>
+        </main>
 
-</head>
-<body>
-  <header></header>
-  <main></main>
-  <footer>
-    <p>© <!--insert year here -->| Teniece Busenbark | Utah, USA</p>
-  </footer>
-    
-</body>
+        <footer>
+            <p>© <span id="currentyear"></span> | Teniece Busenbark | Utah, USA</p>
+            <p id="lastModified"></p>
+        </footer>
+            
+    </body>
 </html>
