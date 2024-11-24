@@ -90,6 +90,4 @@ footer {
     text-align: center;
     font-weight: var(--fontweight-thin);
     color:var(--secondary-color);
-    text-shadow: 1px 1px 2px black;
-
 }
