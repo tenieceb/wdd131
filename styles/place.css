@@ -20,7 +20,7 @@ header{
 }
 
 header p {
-    background-image: url('/images/lindsay-tartan.svg');
+    background-image: url(../images/lindsay-tartan.svg);
     background-size:100%;
     height: 35px;
     margin: 0;
