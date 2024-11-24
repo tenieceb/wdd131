@@ -50,8 +50,6 @@ h1{
     border-bottom: 3px var(--tirtiary-color) solid;
     padding: 15px;
     margin: 0;
-    text-shadow: 1px 1px 2px black;
-
 }
 
 .information{
@@ -90,4 +88,6 @@ footer {
     text-align: center;
     font-weight: var(--fontweight-thin);
     color:var(--secondary-color);
+    text-shadow: 1px 1px 2px black;
+
 }
