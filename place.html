@@ -17,13 +17,13 @@
     <body>
         <header>
             <h1>Scotland</h1>
-            <p id="bottom-border3-img" alt="Lindsay Clan Tartan"></p>
+            <p id="bottom-border3-img"></p>
         </header>
         <main>
-            <div>
-                <picture class="hero">
-                    <source>
-                    <img src="images/hero-small.webp" alt="Woman playing bagpipes." width="1280" height="1920">
+            <div class="hero">
+                <picture>
+                    <source srcset="images/herolarge.webp" media="(min-width: 700px)">
+                    <img src="images/hero-small.webp" alt="Woman playing bagpipes." width="480" height="720">
                 </picture>
             </div>
             <section id="data">
@@ -56,13 +56,13 @@
                 <h2>Weather</h2>
                 <img src="images/mobile-weather-icon.svg" alt="Weather ion depicted with a sun behind a cloud" >
                 <div class= "information" id="weather-info">
-                    <h3>Temperature:</h3>
-                        <p id="temp">7 °C</p>
+                    <h3>Temperature (°C):</h3>
+                        <p id="temp">7</p>
                     <h3>Conditions:</h3>
                         <p id="conditions">Partly Cloudy</p>
-                    <h3>Wind:</h3>
-                        <p id="wind">10 km/h</p>
-                    <h3>Wind Chill:</h3>
+                    <h3>Wind Speed (km/h):</h3>
+                        <p id="wind">10</p>
+                    <h3>Wind Chill (°C):</h3>
                         <p id="windchill"></p>
                 </div>
             </section>
