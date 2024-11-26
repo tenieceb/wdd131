@@ -1,0 +1,118 @@
+:root {
+    --primary-color: #22223B;
+    --secondary-color: #4A4E69;
+    --accent1-color: #C9ADA7;
+    --accent2-color: #e29578;
+    --accent3-color:  #9A8C98;
+    --main-font: "Outfit";
+    --secondary-font: "Mulish";
+
+    --nav-background-color: #ffddd2 ;
+    --nav-link-color: #4A4E69;
+    --nav-hover-link-color: #ffddd2;
+    --nav-hover-background-color: #e29578 ;
+}
+
+body{
+    font-family: var(--secondary-font);
+}
+
+h1, h2,h3, figcaption {
+    font-family: var(--main-font);
+    color:var(--primary-color);
+}
+
+header {
+    position:relative;
+    width: 100% ;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
+    padding: 5px;
+    background-color: var(--nav-background-color);
+    margin: 0 auto;
+}
+
+h1 {
+    padding-left: 5px;
+    text-align: center;
+}
+
+h2, figcaption {
+    text-align: center;
+}
+
+.nav1 a {
+    display: flex;
+    flex-direction: column;
+    color: var(--nav-link-color);
+    text-decoration:none;
+    padding: 1rem;
+    text-align: center; 
+}
+
+nav a:link, nav a:visited {
+    color: var(--nav-link-color);
+}
+
+nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+}
+
+main {
+    margin: 1rem auto;
+}
+
+#figures {
+    display:grid;
+    grid-template-columns: 1fr;
+}
+
+footer {
+    background-color: var(--accent2-color);
+    text-align: center;
+    font-family: var(--main-font);
+    color:var(--primary-color);
+    padding:5px;
+}
+
+#menu{
+    align-self: center;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight:bold;
+    padding: 5px;
+    background-color: var(--nav-background-color);
+    color: var(--primary-color);
+}
+
+#menu::before{
+    content:"≡";
+}
+
+.nav1 a{
+    display:none;
+}
+
+.show a{
+    display:flex;
+    align-items: flex-end;
+}
+
+#menu.show::before{
+    content:"X";
+}
+
+img {
+    width: 100%;
+    box-shadow: 8px 8px 10px var(--accent3-color);
+        
+}
+
+figcaption{
+    padding-top: 10px;
+}
+

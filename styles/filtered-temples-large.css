@@ -1,0 +1,39 @@
+@media screen and (min-width: 500px)
+{
+	body{
+		width: fit-content;
+		padding: 10px;
+	}
+
+    header {
+		display: grid;
+		align-items: center;
+		justify-content: space-between;
+		background-color: var(--nav-background-color);
+		grid-template-columns: 1fr 1fr;
+	}
+
+	.nav1 a{
+		display:block;
+	}
+
+	.nav1 {
+		display: flex;
+		flex-direction:row;
+		justify-content: flex-end;
+		flex: 1 1 100%;
+		color: var(--nav-link-color);
+		text-decoration: none;
+		padding: 1rem;
+		font-size: 1.2rem;
+	}
+	
+	#menu {
+		display:none;
+	}
+
+
+    #figures{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
