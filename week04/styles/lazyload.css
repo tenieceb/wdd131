@@ -1,0 +1,30 @@
+
+
+h1 {
+    text-align: center;
+}
+
+body{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+img {
+    padding: 5px;
+    animation: fadeIn 10s;
+}
+
+@keyframes fadeIn {
+    
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+    
+}
+
+
