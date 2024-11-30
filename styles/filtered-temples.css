@@ -1,7 +1,7 @@
 :root {
     --primary-color: #22223B;
     --secondary-color: #4A4E69;
-    --accent1-color: #C9ADA7;
+    --accent1-color: hwb(11 65% 21%);
     --accent2-color: #e29578;
     --accent3-color:  #9A8C98;
     --main-font: "Outfit";
@@ -15,9 +15,10 @@
 
 body{
     font-family: var(--secondary-font);
+    margin: 0 auto;
 }
 
-h1, h2,h3, figcaption {
+h1, h2,h3, p {
     font-family: var(--main-font);
     color:var(--primary-color);
 }
@@ -30,7 +31,6 @@ header {
     grid-template-columns: 2fr 1fr;
     padding: 5px;
     background-color: var(--nav-background-color);
-    margin: 0 auto;
 }
 
 h1 {
@@ -38,7 +38,7 @@ h1 {
     text-align: center;
 }
 
-h2, figcaption {
+h2, h3, p {
     text-align: center;
 }
 
@@ -64,9 +64,11 @@ main {
     margin: 1rem auto;
 }
 
-#figures {
+#temple-container{
     display:grid;
+    row-gap: 10px;
     grid-template-columns: 1fr;
+    justify-items: center;
 }
 
 footer {
@@ -107,12 +109,14 @@ footer {
 }
 
 img {
-    width: 100%;
+    justify-self: center;
     box-shadow: 8px 8px 10px var(--accent3-color);
-        
+    margin: 7px;
 }
 
-figcaption{
-    padding-top: 10px;
-}
+.temple-card {
+    border: var(--primary-color) 3px solid;
+    box-shadow: 8px 8px 8px  hwb(9 74% 8% / 0.669);
+    ;
 
+}

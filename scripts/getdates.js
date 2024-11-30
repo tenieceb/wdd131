@@ -5,4 +5,11 @@ const today = new Date();
 currentyear.innerHTML =`${today.getFullYear()}`;
 let lastModif = new Date(document.lastModified);
 
-lastupdated.innerHTML = `Last Modified:  ${lastModif}`;
+const lastModifFormatted = lastModif.toLocaleDateString('en-US', {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric'
+}
+)
+
+lastupdated.innerHTML = `Last Modified:  ${lastModifFormatted} ${lastModif.toLocaleTimeString()}`;

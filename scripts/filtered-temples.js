@@ -7,48 +7,25 @@ let small = document.getElementById( "small");
 let pageHeading = document.getElementById("output");
 
 
-function getPageTitle(id){
-    if (id == "home")
-    {
-        pageHeading.innerHTML = "Home";
-    }
-    else if (id == "old")
-    {
-        pageHeading.innerHTML="Old";
-    }
-    else if (id == "new")
-    {
-        pageHeading.innerHTML="New";
-    }
-    else if (id == "large")
-    {
-        pageHeading.innerHTML="Large";
-    }        
-    else if (id == "small")
-    {
-        pageHeading.innerHTML="Small";
-    }
-}
 
 home.addEventListener('click', function(){
-    getPageTitle('home');
-
+    getFilter('home');
 })
 
 old.addEventListener('click', function(){
-    getPageTitle('old');
+    getFilter('old');
 })
 
 newLink.addEventListener('click', function(){
-    getPageTitle('new');
+    getFilter('new');
 })
 
 large.addEventListener('click', function(){
-    getPageTitle('large');
+    getFilter('large');
 })
 
 small.addEventListener('click', function(){
-    getPageTitle('small');
+    getFilter('small');
 })
 
 
@@ -118,5 +95,82 @@ const temples = [
       imageUrl:
       "https://content.churchofjesuschrist.org/templesldsorg/bc/Temples/photo-galleries/mexico-city-mexico/400x250/mexico-city-temple-exterior-1518361-wallpaper.jpg"
     },
-    // Add more temple objects here...
+    {
+      templeName: "McAllen Texas",
+      location: "McAllen, Texas, United States",
+      dedicated: "2023, October, 8",
+      area: 27897,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/mcallen-texas-temple/mcallen-texas-temple-39905-main.jpg"
+    },
+    {
+      templeName: "Tokyo Japan",
+      location: "Tokyo, Japan",
+      dedicated: "2022, July, 3",
+      area:  53997,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/tokyo-japan-temple/tokyo-japan-temple-26340-main.jpg"
+    },
+    {
+      templeName: "Concepción Chile",
+      location: "Concepción,  Chile",
+      dedicated: "2018, October, 28 ",
+      area: 23095 ,
+      imageUrl:
+      "https://churchofjesuschristtemples.org/assets/img/temples/concepcion-chile-temple/concepcion-chile-temple-273-main.jpg"
+    },
   ];
+  createTempleCards(temples);
+
+  function getFilter(id){
+    if (id == "home")
+    {
+        pageHeading.innerHTML = "Home";
+        createTempleCards(temples);
+
+    }
+    else if (id == "old")
+    {
+        pageHeading.innerHTML="Old";
+        let oldTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+        createTempleCards(oldTemples);
+    }
+    else if (id == "new")
+    {
+        pageHeading.innerHTML="New";
+        let newTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
+        createTempleCards(newTemples);
+    }
+    else if (id == "large")
+    {
+        pageHeading.innerHTML="Large";
+        let largeTemples = temples.filter(temple => temple.area > 90000);
+        createTempleCards(largeTemples);
+    }        
+    else if (id == "small")
+    {
+        pageHeading.innerHTML="Small";
+        let smallTemples = temples.filter(temple => temple.area < 10000);
+        createTempleCards(smallTemples);
+    }
+}
+  
+  function createTempleCards (filteredTemples){
+    document.querySelector("#temple-container").innerHTML = ``;
+    filteredTemples.forEach((temple) => {
+      const templeContainer = document.getElementById('temple-container');
+      const templeCard = document.createElement("div");
+      templeCard.className = `temple-card`;
+
+    templeCard.innerHTML = `
+            <h3>${temple.templeName}</h3>
+            <p><strong>Location:</strong> ${temple.location}</p>
+            <p><strong>Dedicated</strong> ${temple.dedicated}</p>
+            <p><strong>Area:</strong> ${temple.area} sq ft</p>
+            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="400" height="250"> 
+    `;
+
+  templeContainer.appendChild(templeCard);
+})};
+  
+
