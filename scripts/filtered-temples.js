@@ -1,36 +1,18 @@
-let home = document.getElementById( "home" );
-let old = document.getElementById( "old");
-let newLink = document.getElementById( "new");
-let large = document.getElementById( "large");
-let small = document.getElementById( "small");
-
+let nav1 = document.querySelector('.nav1');
 let pageHeading = document.getElementById("output");
-
-
-
-home.addEventListener('click', function(){
-    getFilter('home');
-})
-
-old.addEventListener('click', function(){
-    getFilter('old');
-})
-
-newLink.addEventListener('click', function(){
-    getFilter('new');
-})
-
-large.addEventListener('click', function(){
-    getFilter('large');
-})
-
-small.addEventListener('click', function(){
-    getFilter('small');
-})
-
-
 const mainNav = document.querySelector(".nav1");
 const hamburgerButton = document.getElementById("menu");
+
+
+
+nav1.addEventListener('click', function (e) {
+  if (e.target.tagName === 'A') {
+      const filterType = e.target.id; 
+      getFilter(filterType); 
+  }
+});
+
+
 
 hamburgerButton.addEventListener('click',() =>{
     mainNav.classList.toggle('show');
@@ -120,55 +102,55 @@ const temples = [
       "https://churchofjesuschristtemples.org/assets/img/temples/concepcion-chile-temple/concepcion-chile-temple-273-main.jpg"
     },
   ];
-  createTempleCards(temples);
+createTempleCards(temples);
 
-  function getFilter(id){
-    if (id == "home")
-    {
-        pageHeading.innerHTML = "Home";
-        createTempleCards(temples);
+function getFilter(id){
+  if (id == "home")
+  {
+      pageHeading.innerHTML = "Home";
+      createTempleCards(temples);
 
-    }
-    else if (id == "old")
-    {
-        pageHeading.innerHTML="Old";
-        let oldTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
-        createTempleCards(oldTemples);
-    }
-    else if (id == "new")
-    {
-        pageHeading.innerHTML="New";
-        let newTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
-        createTempleCards(newTemples);
-    }
-    else if (id == "large")
-    {
-        pageHeading.innerHTML="Large";
-        let largeTemples = temples.filter(temple => temple.area > 90000);
-        createTempleCards(largeTemples);
-    }        
-    else if (id == "small")
-    {
-        pageHeading.innerHTML="Small";
-        let smallTemples = temples.filter(temple => temple.area < 10000);
-        createTempleCards(smallTemples);
-    }
+  }
+  else if (id == "old")
+  {
+      pageHeading.innerHTML="Old";
+      let oldTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() < 1900);
+      createTempleCards(oldTemples);
+  }
+  else if (id == "new")
+  {
+      pageHeading.innerHTML="New";
+      let newTemples = temples.filter(temple => new Date(temple.dedicated).getFullYear() > 2000);
+      createTempleCards(newTemples);
+  }
+  else if (id == "large")
+  {
+      pageHeading.innerHTML="Large";
+      let largeTemples = temples.filter(temple => temple.area > 90000);
+      createTempleCards(largeTemples);
+  }        
+  else if (id == "small")
+  {
+      pageHeading.innerHTML="Small";
+      let smallTemples = temples.filter(temple => temple.area < 10000);
+      createTempleCards(smallTemples);
+  }
 }
-  
-  function createTempleCards (filteredTemples){
-    document.querySelector("#temple-container").innerHTML = ``;
-    filteredTemples.forEach((temple) => {
-      const templeContainer = document.getElementById('temple-container');
-      const templeCard = document.createElement("div");
-      templeCard.className = `temple-card`;
 
-    templeCard.innerHTML = `
-            <h3>${temple.templeName}</h3>
-            <p><strong>Location:</strong> ${temple.location}</p>
-            <p><strong>Dedicated</strong> ${temple.dedicated}</p>
-            <p><strong>Area:</strong> ${temple.area} sq ft</p>
-            <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="400" height="250"> 
-    `;
+function createTempleCards (filteredTemples){
+  document.querySelector("#temple-container").innerHTML = ``;
+  filteredTemples.forEach((temple) => {
+    const templeContainer = document.getElementById('temple-container');
+    const templeCard = document.createElement("div");
+    templeCard.className = `temple-card`;
+
+  templeCard.innerHTML = `
+          <h3>${temple.templeName}</h3>
+          <p><strong>Location:</strong> ${temple.location}</p>
+          <p><strong>Dedicated</strong> ${temple.dedicated}</p>
+          <p><strong>Area:</strong> ${temple.area} sq ft</p>
+          <img src="${temple.imageUrl}" alt="${temple.templeName}" loading="lazy" width="400" height="250"> 
+  `;
 
   templeContainer.appendChild(templeCard);
 })};
