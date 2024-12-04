@@ -14,6 +14,12 @@ button.addEventListener('click', function()
       }
 });
 
+let chaptersArray  = getChapterList() || [];
+
+chaptersArray.forEach(chapter => {
+    displayList(chapter);
+  });
+
 function displayList(item) {
     let li = document.createElement('li');
     let deletebutton = document.createElement('button');
@@ -42,7 +48,3 @@ function deleteChapter(chapter) {
     chaptersArray = chaptersArray.filter((item) => item !== chapter); //edefine the chaptersArray array using the array.filter method to return everything except the chapter to be removed.
     setChapterList();
 }
-
-let chaptersArray  = getChapterList() || [];
-
-chaptersArray.foreach(chapter => {displayList(chapter);});
