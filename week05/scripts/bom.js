@@ -18,8 +18,9 @@ button.addEventListener('click', function()
 
 chaptersArray.forEach(chapter => {
     displayList(chapter);
-    
 });
+
+console.log(getChapterList())
 
 function displayList(item) {
     let li = document.createElement('li');
