@@ -2,6 +2,7 @@ const input = document.querySelector("#favchap");
 const button = document.querySelector('button');
 const list = document.querySelector('#list');
 let i = 0;
+let chaptersArray  = getChapterList ()||[];
 
 button.addEventListener('click', function()
 {
@@ -14,11 +15,11 @@ button.addEventListener('click', function()
       }
 });
 
-let chaptersArray  = getChapterList() || [];
 
 chaptersArray.forEach(chapter => {
     displayList(chapter);
-  });
+    
+});
 
 function displayList(item) {
     let li = document.createElement('li');
