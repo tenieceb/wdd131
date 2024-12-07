@@ -1,5 +1,5 @@
 let displayCount = document.getElementById("displayCount");
-let reviewCounter = Number(window.localStorage.getItem("reviewCount-ls")) || 0;
+let reviewCounter = Number(localStorage.getItem("reviewCount-ls")) || 0;
 
 reviewCounter++;
 

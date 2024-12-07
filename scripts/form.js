@@ -41,10 +41,19 @@ products.forEach((product) => {
 const starsContainer = document.querySelector('.stars');
 const starInputs = document.querySelectorAll('.stars input[name="stars"]');
 
-starInputs.forEach(input => {
-  input.addEventListener('change', () => {
-    if (input.checked) {
-      starsContainer.classList.add('valid');
-    }
+form.addEventListener('submit', (e) => {
+  e.preventDefault(); 
+  const isStarSelected = Array.from(starInputs).some(input => input.checked);
 
-})});
+  if (!isStarSelected) {
+    alert('Please select a star rating before submitting the form.');
+    return;
+  }
+
+  let reviewCounter = Number(localStorage.getItem('reviewCount-ls')) || 0;
+  reviewCounter++;
+  localStorage.setItem('reviewCount-ls', reviewCounter);
+
+  // Redirect to review.html
+  window.location.href = 'review.html';
+});
