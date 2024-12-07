@@ -1,4 +1,3 @@
-let displayCount = document.getElementById("displayCount");
 
 const products = [
     {
@@ -28,12 +27,24 @@ const products = [
     }
   ];
 
+// adding the products to the drop down list
+
 products.forEach((product) => {
     const selection = document.getElementById('productName');
     const option = document.createElement("option");
     option.value = product.id;
-    option.innerHTML = product.name;
+    option.textContent = product.name;
     selection.appendChild(option);
 })
 
+// making it visually known that stars also needs to be filled out
+const starsContainer = document.querySelector('.stars');
+const starInputs = document.querySelectorAll('.stars input[name="stars"]');
 
+starInputs.forEach(input => {
+  input.addEventListener('change', () => {
+    if (input.checked) {
+      starsContainer.classList.add('valid');
+    }
+
+})});

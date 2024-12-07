@@ -24,17 +24,17 @@
         <legend id="required">Product Information*</legend>
         <label for="productName">Product Name*</label>
           <select id="productName" name="product" required>
-            <option value="" disabled>Select a Product ...</option>
+            <option value="" disabled selected>Choose Your Product...</option>
           </select>
         <label for="installDate">Date of Installation*</label>
           <input type="date" id="installDate" required>
           <p>Overall Rating*</p>
           <div class="stars" id="stars" >
             <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
-            <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
-            <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
-            <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
-            <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
+            <input type="radio" id="fourstar" name="stars" value="4" ><label for="fourstar"></label>
+            <input type="radio" id="threestar" name="stars" value="3"><label for="threestar"></label>
+            <input type="radio" id="twostar" name="stars" value="2" ><label for="twostar"></label>
+            <input type="radio" id="onestar" name="stars" value="1"><label for="onestar"></label>
           </div>
         </fieldset>
 
@@ -57,7 +57,7 @@
         <label for="userName">User Name </label>
           <input type="text" id="userName" name="userName">
       </fieldset>
-      <input type="submit" value="Post Review">
+      <input id="submit" type="submit" value="Post Review">
     </form>
 
   </main>

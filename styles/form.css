@@ -85,6 +85,7 @@ section h2, section p{
     font-size: 1rem;
     border-radius: 3px;
     padding: 2px 0 2px 0;
+    cursor: pointer;
 }
 
 
@@ -111,11 +112,13 @@ section h2, section p{
 	display: flex;
 	align-items: center;
 	caret-color: rgba(0, 0, 0, 0);
+    cursor: pointer;
     
 }
 
-.stars > label:hover {
-	color: var(--secondary-color);
+.stars > label:hover ~ label::before,
+.stars > label:hover::before {
+  color: white;
 }
 
 .stars > label::before {
@@ -125,7 +128,7 @@ section h2, section p{
 
 .stars input:checked ~ label::before {
 	content: "\2605";
-    color: white;
+    color:white;
 } 
 
 /* checkbox */
@@ -191,16 +194,22 @@ section h2, section p{
   }
 
 .reviewform input:required,
-.reviewform select:required {
+.reviewform select:required,
+.reviewform .stars
+{
     border: solid 3px var(--required-color);
     border-radius: 3px;
 }
 
 .reviewform select:required:valid,
-#installDate:required:valid {
+#installDate:required:valid,
+.reviewform .stars.valid {
     border: solid 2px rgba(31, 127, 31, 0.635);
 }
 
+.reviewform .stars{
+    padding-bottom: 6px;
+}
 
 /* submit button */
 .reviewform input[type="submit"]{
