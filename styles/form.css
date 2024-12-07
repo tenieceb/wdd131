@@ -88,6 +88,9 @@ section h2, section p{
     cursor: pointer;
 }
 
+#notavail {
+    color:rgba(0, 38, 38, 0.279)
+}
 
 
 
