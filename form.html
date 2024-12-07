@@ -9,15 +9,58 @@
     <link rel="stylesheet" href="styles/form-large.css">
     <script src="scripts/form.js" defer ></script>
     <script src="scripts/getdates.js" defer ></script>
+    <title>Product Review Form</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <title>Product Review Form</title>
-
 </head>
 <body>
-  <header></header>
-  <main></main>
+  <header>
+    <h1>Product Review</h1>
+  </header>
+  <main>
+    <form method="get" action="review.html" class="reviewform">
+      <fieldset>
+        <legend id="required">Product Information*</legend>
+        <label for="productName">Product Name*</label>
+          <select id="productName" name="product" required>
+            <option value="" disabled>Select a Product ...</option>
+          </select>
+        <label for="installDate">Date of Installation*</label>
+          <input type="date" id="installDate" required>
+          <p>Overall Rating*</p>
+          <div class="stars" id="stars" >
+            <input type="radio" id="fivestar" name="stars" value="5" required><label for="fivestar"></label>
+            <input type="radio" id="fourstar" name="stars" value="4" required><label for="fourstar"></label>
+            <input type="radio" id="threestar" name="stars" value="3" required><label for="threestar"></label>
+            <input type="radio" id="twostar" name="stars" value="2" required><label for="twostar"></label>
+            <input type="radio" id="onestar" name="stars" value="1" required><label for="onestar"></label>
+          </div>
+        </fieldset>
+
+      <fieldset>
+        <legend>Features (optional)</legend>
+        <p>Which features did you find useful in the product?</p>
+        <p id="parenthesis">(Check all that apply)</p>
+          <label class="container"><input type="checkbox" id="durability" value="yes"> Durability  <span class="checkboxes"></span></label>
+          <label class="container"><input type="checkbox" id="ease" value="yes"> Ease of Use       <span class="checkboxes"></span></label>
+          <label class="container"><input type="checkbox" id="performance" value="yes"> Performance<span class="checkboxes"></span></label>
+          <label class="container"><input type="checkbox" id="design" value="yes"> Design          <span class="checkboxes"></span></label>
+      </fieldset>
+      <fieldset>
+        <legend>Written Review (optional)</legend>
+        <label for="writtenReview">Written Review </label>
+          <textarea id="writtenReview" name="written review"></textarea>
+      </fieldset>
+      <fieldset>
+        <legend>User Information (optional)</legend>
+        <label for="userName">User Name </label>
+          <input type="text" id="userName" name="userName">
+      </fieldset>
+      <input type="submit" value="Post Review">
+    </form>
+
+  </main>
   <footer>
     <p>© <span id="currentyear"></span> | Teniece Busenbark | Utah, USA</p>
     <p id="lastModified"></p>
