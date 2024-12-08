@@ -1,8 +1,4 @@
-let displayCount = document.getElementById("displayCount");
-let reviewCounter = Number(localStorage.getItem("reviewCount-ls")) || 0;
 
-reviewCounter++;
-
+let reviewCounter= localStorage.getItem("reviewCount-ls");
 displayCount.innerHTML = `Items reviewed: ${reviewCounter}`;
 
-localStorage.setItem("reviewCount-ls", reviewCounter);
