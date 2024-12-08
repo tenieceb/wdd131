@@ -2,21 +2,74 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="wiph=device-width, initial-scale=1.0">
     <meta name="author" content="Teniece Busenbark">
-    <meta name="description" content="">
-    <link rel="stylesheet" href="styles/.css">
-    <script src="scripts/.js" defer ></script>
-    <!-- Insert font links here - ->
-    <title>Document</title>
-
+    <meta name="description" content="Wp131 Project Site Plan">
+    <link rel="stylesheet" href="styles/site-plan.css">
+    <script src="scripts/site-plan.js" defer ></script>
+    <title>WDD131 Project Site Plan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">  
 </head>
 <body>
-  <header></header>
-  <main></main>
+  <header>
+    <h1>WDD131 - Project Site Plan</h1>
+  </header>
+  <main>
+    <section class="site-name">
+      <h2>Site Name</h2>
+      <p><span id="myspacename">Myspace</span> of Old</p>
+      <p>- The website is a review of Myspace in the years of around 2006-2008 </p>
+    </section>
+    <section class="site-purpose">
+      <h2>Site Purpose</h2>
+      <p>This website will have a brief history of Myspace including how users learned to code to decorate their pages. It will have a small "try it" section that will enable users to manipulate a mock myspace page.</p>
+    </section>
+    <section class="scenarios">
+      <h2>Scenarios</h2>
+      <p>- Who used Myspace?</p>
+      <p>- How did Myspace users manipulate their pages?</p>
+    </section>
+    <section class="color-schema">
+      <h2>Color Schema</h2>
+      <img src="images/colorschema.jpg" alt="5 colors">
+      <div>
+        <p>Primary-color: #353535</p>
+          <p>- Backgrounds to the header and footer</p>
+        <p>Secondary-color: #3c6e71</p>
+          <p>- Background to main elements</p>
+        <p>Accent-color: #d9d9d9</p>
+          <p>- Borders and background to links</p>
+        <p>Link-color: #284b63</p>
+          <p>- Link color</p>
+        <p>Font-color: #ffffff</p>
+          <p>- Font color</p>
+      </div>
+    </section>
+    <section class="typography">
+      <h2>Typography</h2>
+      <p>Font: Roboto<br>Weights: 400, 500, 700<br>- h1 will be 700, lesser headings 500, other items will be 400</p>
+    </section>
+    <section class="wireframe">
+      <h2>Wireframes</h2>
+      <div id="wireframes">
+      <figure id="small">
+        <figcaption>Cellphone View</figcaption>
+        <img src="images/project-small-wireframe.webp" alt="Cellphone size wireframe">
+      </figure>
+
+      <figure id="large">
+        <figcaption>Desktop View</figcaption>
+        <img src="images/project-large-wireframe.webp" alt="Desktop size wireframe">
+      </figure>
+    `</div>
+    </section>
+  </main>
   <footer>
-    <p>© <!--insert year here -->| Teniece Busenbark | Utah, USA</p>
-  </footer>
+    <p>© <span id="currentyear"></span> | Teniece Busenbark | Utah, USA</p>
+    <p id="lastModified"></p>
+</footer>
     
 </body>
 </html>
