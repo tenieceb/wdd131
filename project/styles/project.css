@@ -1,0 +1,36 @@
+:root {
+    --primary-color: #8E0003;
+    --secondary-color: #405628;
+    --tertiary-color: #E05C6F;
+
+    --link-background-color: #18300F;
+    --link-hover-color: #AED3D8;
+    --link-visited-color: #F70123;
+
+    --font-famiy: "Josephin Slab", serif;
+
+    --santa-font-family: "Merienda", cursive;
+}
+
+body {
+    margin: 0 auto;
+    width: 100%;
+}
+
+header {
+    position:relative;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 2fr 1fr;
+    padding: 5px;
+    background-color: var(--nav-background-color);
+    margin: 0 auto;
+}
+main{
+    display: grid;
+    gap: 20px;
+    padding: 10px;
+    grid-auto-columns: 1fr 3fr;
+    max-width:fit-content;
+    font-family: var(--secondary-font);
+}
