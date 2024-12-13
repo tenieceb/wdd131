@@ -2,35 +2,242 @@
     --primary-color: #8E0003;
     --secondary-color: #405628;
     --tertiary-color: #E05C6F;
+    
 
-    --link-background-color: #18300F;
-    --link-hover-color: #AED3D8;
-    --link-visited-color: #F70123;
+    --nav-hover-background-color:  #18300F;
+    --nav-link-color: white;
+    --link-visited-color: #AED3D8;
 
-    --font-famiy: "Josephin Slab", serif;
+    --font-family: "Josephin Slab";
+    --font-color: white;
 
-    --santa-font-family: "Merienda", cursive;
+    --santa-font-family: "Merienda";
 }
 
 body {
+    display: block;
     margin: 0 auto;
     width: 100%;
+    background-color: var(--link-visited-color);
 }
 
+h2 ,h3, p, a {
+    font-family: var(--font-family);
+}
+/* ----- heading ----- */
 header {
     position:relative;
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: 2fr 1fr;
     padding: 5px;
+    background-color: var(--primary-color);
+    border-radius: 2rem;
+    border: .2rem dashed var(--tertiary-color);
+}
+
+h1 {
+    font-family: var(--santa-font-family);
+    color:var(--font-color);
+    padding-left: 5px;
+    text-align: center;
+    font-size: 3rem;
+    text-shadow: .2rem .2rem var(--nav-hover-background-color) ;
+}
+
+.show a:link {
+    color: var(--nav-link-color);
+}
+
+.show a:visited {
+    color: var(--link-visited-color);
+}
+
+.show a:hover {
+    color: var(--primary-color);
+    background-color: var(--nav-hover-background-color);
+}
+
+/* -----hamburger styling----- */
+#menu{
+    grid-column:2;
+    align-self: center;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight:bold;
+    padding: 5px;
     background-color: var(--nav-background-color);
-    margin: 0 auto;
+    color: var(--primary-color);
 }
+
+#menu::before{
+    content:"≡";
+    color: var(--font-color);
+}
+
+.nav1 a{
+    display:none;
+}
+
+.show {
+    grid-column: 1/3;
+    display:grid;
+}
+
+.show a{
+    grid-column: 1/2;
+    display:flex;
+    align-items: flex-end;
+    flex-direction: column;
+    color: var(--font-color);
+    text-decoration:none;
+    padding: 1rem;
+    text-align: end;
+}
+
+.show a:hover {
+    color: var(--primary-color);
+    background-color: var(--nav-hover-background-color);
+}
+
+#menu.show::before{
+    content:"❄";
+    color: var(--font-color);
+}
+
+/* -----main styling----- */
 main{
-    display: grid;
-    gap: 20px;
-    padding: 10px;
-    grid-auto-columns: 1fr 3fr;
-    max-width:fit-content;
-    font-family: var(--secondary-font);
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    font-family: var(--font-family);
+    border-radius: .5rem;
 }
+
+/* -----card1----- */
+#card1 {
+    display:grid;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    margin: .5rem 0 0 0;
+    border-radius: 1rem;
+    border: .2rem dashed var(--nav-hover-background-color); 
+}
+
+#card1 h3 {
+    color: var(--font-color);
+    text-shadow: 1px .8px var(--nav-hover-background-color) ;
+    margin: 0;
+    padding-left: 1rem;
+}
+
+#card1 p {
+    margin-top: .3rem;
+    color: var(--font-color);
+    padding-left: 2rem;
+}
+
+.santalore {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#card1 a {
+    color: var(--nav-link-color);
+    text-decoration: none;
+    align-self: stretch;
+    padding: .5rem;
+}
+
+#card1 a:link{
+    color: var(--font-color);
+
+} 
+
+#card1 a:visited {
+    color: var(--link-visited-color);
+}
+
+#card1 a:hover {
+    color: var(--font-color);
+    background-color: var(--nav-hover-background-color);
+    border-radius: 1rem;
+    padding: .5rem;
+}
+
+/* ----- Santa info container ----- */
+
+#card2 {
+    display: grid;
+    grid-auto-rows: 50px 1fr 3fr;
+    grid-auto-columns: 1fr 1fr;
+    gap: 5px;    
+    border: dashed .2rem var(--primary-color);
+    border-radius: 5%;
+    background-color: var(--tertiary-color);
+    margin: 1rem 0 1rem 0;
+}
+
+#card2>h2 {
+    grid-row: 1;
+    grid-column: 1;
+    margin: 0;
+    text-align: center;
+    padding: 1rem;
+    color: var(--font-color);
+    text-shadow: 1px .8px var(--nav-hover-background-color) ;
+}
+
+figure{
+    display: flex;
+    flex-direction: column;
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.santaimage img{
+    align-self: center;
+    max-width: 100%;
+    height: auto;
+    border-radius: 40%;
+    box-shadow: 5px 5px 8px var(--nav-hover-background-color);
+    margin: .5rem 0 1rem 0;
+}
+
+.santaimage figcaption, figcaption a {
+    text-decoration: none;
+    font-family: var(--font-family);
+    color: var(--nav-hover-background-color);
+    text-align: center;
+    width: 10rem;
+    align-self: center;
+    font-size: 10px;
+    cursor: pointer;
+}
+
+#santainfo {
+    padding: 1rem;
+    grid-column: 1;
+    grid-row: 2;
+    color: var(--font-color);
+    text-indent: 2rem;
+}
+
+/* -----Footer----- */
+footer {
+    text-align: center;
+    font-family: var(--font-family);
+    color:var(--font-color);
+    padding: 3px;
+    background-color: var(--primary-color);
+    border-radius: 1rem;
+    border: .2rem dashed var(--tertiary-color);
+}
+
+
+
+
+
