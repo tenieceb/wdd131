@@ -24,6 +24,7 @@ body {
 h2 ,h3, p, a {
     font-family: var(--font-family);
 }
+
 /* ----- heading ----- */
 header {
     position:relative;
@@ -45,18 +46,7 @@ h1 {
     text-shadow: .2rem .2rem var(--nav-hover-background-color) ;
 }
 
-.show a:link {
-    color: var(--nav-link-color);
-}
 
-.show a:visited {
-    color: var(--link-visited-color);
-}
-
-.show a:hover {
-    color: var(--primary-color);
-    background-color: var(--nav-hover-background-color);
-}
 
 /* -----hamburger styling----- */
 #menu{
@@ -68,7 +58,6 @@ h1 {
     font-size: 2rem;
     font-weight:bold;
     padding: 5px;
-    background-color: var(--nav-background-color);
     color: var(--primary-color);
 }
 
@@ -97,9 +86,9 @@ h1 {
     text-align: end;
 }
 
-.show a:hover {
+.nav1 a.active {
     color: var(--primary-color);
-    background-color: var(--nav-hover-background-color);
+    background-color: var(--font-color);
 }
 
 #menu.show::before{
@@ -118,7 +107,7 @@ main{
 
 /* -----card1----- */
 #card1 {
-    display:grid;
+    display: grid;
     background-color: var(--secondary-color);
     padding: 1rem;
     margin: .5rem 0 0 0;
@@ -126,46 +115,38 @@ main{
     border: .2rem dashed var(--nav-hover-background-color); 
 }
 
-#card1 h3 {
-    color: var(--font-color);
-    text-shadow: 1px .8px var(--nav-hover-background-color) ;
-    margin: 0;
-    padding-left: 1rem;
+#indicator::before {
+    content: "▼";
 }
 
-#card1 p {
-    margin-top: .3rem;
+#santaloreheading {
+    cursor: pointer;
     color: var(--font-color);
-    padding-left: 2rem;
-}
-
-.santalore {
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-#card1 a {
-    color: var(--nav-link-color);
+.santalore a, #instruction {
+    display: none;
+}
+
+.showSantas a {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    color: var(--font-color);
     text-decoration: none;
-    align-self: stretch;
-    padding: .5rem;
+    padding: 1rem;
+    text-align: end;
 }
 
-#card1 a:link{
-    color: var(--font-color);
-
-} 
-
-#card1 a:visited {
-    color: var(--link-visited-color);
+.showSantas #instruction {
+    display: block; 
 }
 
-#card1 a:hover {
-    color: var(--font-color);
-    background-color: var(--nav-hover-background-color);
-    border-radius: 1rem;
-    padding: .5rem;
+
+#indicator.showSantas::before {
+    content: "△";
 }
 
 /* ----- Santa info container ----- */
@@ -176,7 +157,7 @@ main{
     grid-auto-columns: 1fr 1fr;
     gap: 5px;    
     border: dashed .2rem var(--primary-color);
-    border-radius: 5%;
+    border-radius: 1rem;
     background-color: var(--tertiary-color);
     margin: 1rem 0 1rem 0;
 }
@@ -211,6 +192,7 @@ figure{
     text-decoration: none;
     font-family: var(--font-family);
     color: var(--nav-hover-background-color);
+    color: var(--font-color);
     text-align: center;
     width: 10rem;
     align-self: center;

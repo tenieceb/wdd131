@@ -26,6 +26,19 @@ hamburgerButton.addEventListener('click',() =>{
 })
 
 
+
+////////// Who is Santa button //////////
+const santaloreHeading = document.getElementById("santaloreheading");
+const santaloreNav = document.querySelector(".santalore");
+const indicator = document.getElementById("indicator");
+const instruction = document.getElementById("instruction");
+
+santaloreHeading.addEventListener("click", () => {
+    santaloreNav.classList.toggle("showSantas");
+    indicator.classList.toggle("showSantas");
+    instruction.classList.toggle("showSantas");
+});
+
 santalore.addEventListener('click', function (e) {
     e.preventDefault();
     if (e.target.tagName === 'A') {
@@ -143,9 +156,9 @@ function createSantaCard(filteredSantas){
         santaCard.innerHTML = `
         <h3>The Birth of Jesus Christ</h3>
         <p><strong>Location:</strong> ${santa.location}</p>
-        <figure class="santaimage"><img src=${santa.imageSrc} alt=${santa.alt} loading="lazy"><figcaption>${santa.attribution}></figcaption></figure>
+        <figure class="santaimage"><img src=${santa.imageSrc} alt=${santa.alt} loading="lazy"><figcaption>${santa.attribution}</figcaption></figure>
         <p id="santainfo"> ${santa.story}</p>
-        <figure class="santaimage"><img src=${santa.imageSrc2} alt=${santa.alt2} loading="lazy"><figcaption>${santa.attribution2}></figcaption></figure>
+        <figure class="santaimage"><img src=${santa.imageSrc2} alt=${santa.alt2} loading="lazy"><figcaption>${santa.attribution2}</figcaption></figure>
         <p>Learn more:<a id="lighttheworld" href="https://www.churchofjesuschrist.org/comeuntochrist/light-the-world">Light the World</a> by The Church of Jesus Christ of Latter Day Saints </p>
     `;
     }
@@ -153,9 +166,9 @@ function createSantaCard(filteredSantas){
     else {    
         santaCard.innerHTML = `
         <p><strong>Location:</strong> ${santa.location}</p>
-        <figure class="santaimage"><img src=${santa.imageSrc} alt=${santa.alt} loading="lazy"><figcaption>${santa.attribution}></figcaption></figure>
+        <figure class="santaimage"><img src=${santa.imageSrc} alt=${santa.alt} loading="lazy"><figcaption>${santa.attribution}</figcaption></figure>
         <p id="santainfo"> ${santa.story}</p>
-        <figure class="santaimage"><img src=${santa.imageSrc2} alt=${santa.alt2} loading="lazy"><figcaption>${santa.attribution2}></figcaption></figure>
+        <figure class="santaimage"><img src=${santa.imageSrc2} alt=${santa.alt2} loading="lazy"><figcaption>${santa.attribution2}</figcaption></figure>
     `;
     }
 
