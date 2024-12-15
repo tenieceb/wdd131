@@ -1,1 +1,58 @@
-    <!-- Photo by Andrea Piacquadio: https://www.pexels.com/photo/man-in-santa-claus-costume-716658/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Teniece Busenbark">
+    <meta name="description" content="WDD131 Project website on Santa Claus page two, Santa Tracker.">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/project-large.css">
+    <script src="scripts/project.js" defer ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Santa Claus 🎄 Santa Tracker</title>
+</head>
+<body>
+    <header>
+        <h1>Santa Claus</h1>
+        <a id='menu' href='#'></a>
+        <nav class="nav1">
+            <a id="home" href="index.html">Home</a>
+            <a id="santatracker" href="santatracker.html">Santa Tracker</a>
+            <a id="letter" href="form.html">Send Santa a Letter</a>
+        </nav>
+      </header>
+  <main>
+    <section class="secondpage" id="card1">
+        <h2>Track Santa</h2>
+        <div class="norad">
+            <p>Did you know you can track Santa Claus as he travels he world on Christmas Eve? Thanks to NORAD, we can watch Santa take his flight around the world. The video below is a replay of the tracking in 2023. If you'd like to check NORAD for 2024, click the link below.</p>
+            <a href="https://www.noradsanta.org/en/">🎅 NORAD Track Santa 2024 🎅 </a>
+        </div>
+        <figure class="santaimage" id="surprisedsanta">
+            <img src="images/surprisedsanta.webp" loading="lazy" alt="Surprised Santa">
+            <figcaption>Photo by Andrea Piacquadio: <a href="https://www.pexels.com/photo/man-in-santa-claus-costume-716658/">Pexels</a></figcaption>
+        </figure>
+    </section>
+        <div class="video-container">
+            <iframe 
+                src="https://www.youtube.com/embed/4CwnT0Puti0?si=Ubv_ZHPdr1BJOY7P" 
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                referrerpolicy="strict-origin-when-cross-origin" 
+                allowfullscreen>
+            </iframe>
+        </div>
+  </main>
+  <footer>
+    <p>© <span id="currentyear"></span> 🎅 Teniece Busenbark 🎅 Utah,USA</p>
+    <p id="lastModified"></p>
+</footer>
+    
+</body>
+</html>
