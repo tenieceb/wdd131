@@ -31,20 +31,24 @@ hamburgerButton.addEventListener('click',() =>{
 const santaloreHeading = document.getElementById("santaloreheading");
 const indicator = document.getElementById("indicator");
 const instruction = document.getElementById("instruction");
-
-indicator.addEventListener("click", () => {
-    santalore.classList.toggle("showSantas");
-    indicator.classList.toggle("showSantas");
-    instruction.classList.toggle("showSantas");
-});
-
-santalore.addEventListener('click', function (e) {
-    e.preventDefault();
-    if (e.target.tagName === 'A') {
-      const filterType = e.target.id; 
-      getFilter(filterType); 
-  }
-});
+if (santaloreHeading) {
+    indicator.addEventListener("click", () => {
+        santalore.classList.toggle("showSantas");
+        indicator.classList.toggle("showSantas");
+        instruction.classList.toggle("showSantas");
+    });
+    
+    santalore.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (e.target.tagName === 'A') {
+          const filterType = e.target.id; 
+          getFilter(filterType); 
+      }
+    });
+    console.log('Element exists, applying rule.');
+} else {
+    console.log('Element not found, ignoring rule.');
+}
 
 
 

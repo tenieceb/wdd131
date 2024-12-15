@@ -202,7 +202,6 @@ figure{
     font-family: var(--font-family);
     color: var(--font-color);
     text-align: center;
-    width: 10rem;
     align-self: center;
     font-size: 10px;
     cursor: pointer;
