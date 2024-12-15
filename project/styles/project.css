@@ -311,4 +311,24 @@ h2, .norad a{
     margin:0;
 }
 
+/* thirdpage */
+.page3 {
+    color: var(--font-color);
+    display:flex;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    padding: 1rem;
+    margin: .5rem 0 0 0;
+    border-radius: 1rem;
+    border: .2rem dashed var(--quaternary-color);
+    align-content: center;
+    height: fit-content;
+    flex-wrap: wrap;
+    align-items: center;
+}
 
+.santaletters a{
+    color: var(--font-color);
+    align-self: center;  
+    text-align: center;
+}

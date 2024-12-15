@@ -1,0 +1,82 @@
+
+/* ///// form///// */
+.santaform fieldset {
+    background-color: var(--primary-color);
+    margin: 3px;
+    border-radius: 2rem;
+    border: var(--tertiary-color) dashed .2rem ;
+}
+
+/* legend*/
+.santaform legend {
+    display: block;
+    font-weight: var(--font-light);
+    color: var(--font-color);
+    background: var(--secondary-color);
+    border-radius: 1rem;
+    border: var(--quaternary-color) dashed .2rem;
+    padding: 1% 2% 1% 2%;
+}
+
+
+
+/* labels and p "labels" */
+.santaform label, .santaform p  {
+    display: block;
+    margin: 0;
+    color:var(--font-color);
+    padding: 10px 0 2px 0;
+    margin-left: 1rem;
+
+}
+
+
+/* inputs all but radio */
+#userName,
+.santaform input[type="date"],
+.santaform input[type="text"]
+ {
+    width:100%;
+    max-width: 310px;
+    margin: 0 auto;
+    color: var(--font-color);
+    font-size: 1rem;
+    border-radius: 3px;
+    padding: 2px 0 2px 0;
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+.naughtynicelist{
+    height:fit-content;
+}
+
+#lettertosanta label {
+    display: block;      
+    margin-bottom: 5px;   
+  }
+  
+  #lettertosanta textarea {
+    width: 100%;          
+    min-height: 150px;
+    margin-top: 0;    
+  }
+
+#writtenLetter {
+    width:100%;
+    max-width:310px;
+    background-color: var(--secondary-color);
+    color:var(--font-color);
+}
+
+/* submit button */
+.santaform input[type="submit"]{
+    background-image: linear-gradient(var(--primary-color), var(--secondary-color));
+    color:var(--font-color);
+    border: .2rem dashed var(--font-color);
+    border-radius: 3rem;
+    padding: .6rem;
+    width:100%;
+    height:3rem;
+}

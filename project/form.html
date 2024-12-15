@@ -1,1 +1,73 @@
-<!-- Photo by Jonathan Borba: https://www.pexels.com/photo/photo-of-girl-sitting-near-christmas-tree-3303613/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Teniece Busenbark">
+    <meta name="description" content="WDD131 Project website on Santa Claus third page, letter to santa.">
+    <link rel="stylesheet" href="styles/project.css">
+    <link rel="stylesheet" href="styles/form.css">
+    <link rel="stylesheet" href="styles/project-large.css">
+    <script src="scripts/project.js" defer ></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Santa Claus 🎁 Send a Letter</title>
+</head>
+<body>
+    <header>
+        <h1>Santa Claus</h1>
+        <a id='menu' href='#'></a>
+        <nav class="nav1">
+            <a id="home" href="index.html">Home</a>
+            <a id="santatracker" href="santatracker.html">Santa Tracker</a>
+            <a id="letter" href="form.html">Send Santa a Letter</a>
+        </nav>
+    </header>
+  <main>
+    <section class="page3" id="card1">
+        <h2 id="letterheading">Writing to Santa</h2>
+        <div class="santaletters">
+            <p>Little kids write to Santa Claus to tell him what they want for Christmas and if they were naughty or nice. Sometimes kids will even ask for Santa to gift their family certain items as well. The United States Postal Service has a program called USPS Operation Santa. With the letter addressed to Santa 123 Elf Road, North Pole, 88888. Since Santa is so busy, people can choose to become a Santa Helper and "Adopt a Letter". Adopting a letter means the Santa Helper will become a part of Santa's team and helping holiday wishes come true. For more information, click the link below!</p>
+            <a href="https://www.uspsoperationsanta.com/">🎁 USPS Operation Santa 🎁</a>
+        </div>
+        <figure class="santaimage" id="girlwriting">
+            <img src="images/girlwritingundertree.webp" loading="lazy" alt="Little girl writing under tree." width="640" height="940">
+            <figcaption>Photo by Jonathan Borba:<a href=" https://www.pexels.com/photo/photo-of-girl-sitting-near-christmas-tree-3303613/">Pexels</a></figcaption>
+        </figure>
+    </section>
+    <section class="santaform">
+        <form method="get" action="sent.html" class="santaletter" id="card2">
+            <h2>Send your own letter to Santa here!</h2>
+            <fieldset>
+              <legend>Information</legend>
+              <label for="userName" >Name*</label>
+                <input type="text" id="userName" name="userName" required>
+              <label for="sentDate">Date of Letter*</label>
+                <input type="date" id="sentDate" required>
+            </fieldset>
+            <fieldset class="naughtynicelist">
+                <legend>Santa's Naughty or Nice List</legend>
+                <p>Were you naughty or nice this year?*</p>
+                    <label for="nice"><input type="radio" id="nice" name="naughtyornice" required> Nice</label>
+                    <label for="naughty"><input type="radio" id="naughty" name="naughtyornice"> Naughty</label>
+            </fieldset>
+            <fieldset id="lettertosanta">
+              <legend>Letter</legend>
+              <label for="writtenLetter">Dear Santa, </label>
+                <textarea id="writtenLetter" name="writtenLetter" ></textarea>
+            </fieldset>
+            <input id="submit" type="submit" value="Send Letter">
+          </form>
+    </section>
+  </main>
+  <footer>
+    <p>© <span id="currentyear"></span> 🎅 Teniece Busenbark 🎅 Utah,USA</p>
+    <p id="lastModified"></p>
+  </footer>
+    
+</body>
+</html>
