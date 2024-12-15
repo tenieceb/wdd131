@@ -29,12 +29,11 @@ hamburgerButton.addEventListener('click',() =>{
 
 ////////// Who is Santa button //////////
 const santaloreHeading = document.getElementById("santaloreheading");
-const santaloreNav = document.querySelector(".santalore");
 const indicator = document.getElementById("indicator");
 const instruction = document.getElementById("instruction");
 
-santaloreHeading.addEventListener("click", () => {
-    santaloreNav.classList.toggle("showSantas");
+indicator.addEventListener("click", () => {
+    santalore.classList.toggle("showSantas");
     indicator.classList.toggle("showSantas");
     instruction.classList.toggle("showSantas");
 });
@@ -109,7 +108,8 @@ const santas = [
 
 ]
 
-let santaContainer = document.querySelector("#santacontainer");
+let santaCard = document.querySelector(".santacard");
+
 
 function getFilter(id){
     if (id == "santaclaus")
@@ -147,33 +147,49 @@ function getFilter(id){
 
 
 function createSantaCard(filteredSantas){
-    santaContainer.innerHTML = ``;
     filteredSantas.forEach(santa => {
-      const santaCard = document.createElement("div");
-      santaCard.className = `santa-card`;
-    if (santa.santaName === "Jesus Christ")
-    {
-        santaCard.innerHTML = `
-        <h3>The Birth of Jesus Christ</h3>
-        <p><strong>Location:</strong> ${santa.location}</p>
-        <figure class="santaimage"><img src=${santa.imageSrc} alt=${santa.alt} loading="lazy"><figcaption>${santa.attribution}</figcaption></figure>
-        <p id="santainfo"> ${santa.story}</p>
-        <figure class="santaimage"><img src=${santa.imageSrc2} alt=${santa.alt2} loading="lazy"><figcaption>${santa.attribution2}</figcaption></figure>
-        <p>Learn more:<a id="lighttheworld" href="https://www.churchofjesuschrist.org/comeuntochrist/light-the-world">Light the World</a> by The Church of Jesus Christ of Latter Day Saints </p>
-    `;
-    }
+        if (santa.santaName === "Jesus Christ")
+        {
+            santaCard.innerHTML = `
+            <h3 id="jesus">The Birth of Jesus Christ</h3>
+            <p id="origin"><strong>Origin:</strong> ${santa.location}</p>
+            <figure class="santaimage" id="img2"><img src=${santa.imageSrc} alt=${santa.alt} loading="lazy"><figcaption>${santa.attribution}</figcaption></figure>
+            <p class="santainfo" id="santafacts"> ${santa.story}</p>
+            <figure class="santaimage" id="img1"><img src=${santa.imageSrc2} alt=${santa.alt2} loading="lazy"><figcaption>${santa.attribution2}</figcaption></figure>
+            <p class="light">Learn more:<a id="lighttheworld" href="https://www.churchofjesuschrist.org/comeuntochrist/light-the-world">Light the World</a> by The Church of Jesus Christ of Latter Day Saints </p>
+            <nav id="return"><a id="return" href="#">❄ Return to Home ❄</a></div>
 
-    else {    
-        santaCard.innerHTML = `
-        <p><strong>Location:</strong> ${santa.location}</p>
-        <figure class="santaimage"><img src=${santa.imageSrc} alt=${santa.alt} loading="lazy"><figcaption>${santa.attribution}</figcaption></figure>
-        <p id="santainfo"> ${santa.story}</p>
-        <figure class="santaimage"><img src=${santa.imageSrc2} alt=${santa.alt2} loading="lazy"><figcaption>${santa.attribution2}</figcaption></figure>
-    `;
-    }
+        `;
+        }
 
-    
-    santaContainer.appendChild(santaCard);
-  })};
-    
+        else {    
+            santaCard.innerHTML = `
+            <p id="origin"><strong>Origin:</strong> ${santa.location}</p>
+            <figure class="santaimage" id="img1"><img src=${santa.imageSrc} alt=${santa.alt} loading="lazy"><figcaption>${santa.attribution}</figcaption></figure>
+            <p class="santainfo" id="santafacts"> ${santa.story}</p>
+            <figure class="santaimage" id="img2"><img src=${santa.imageSrc2} alt=${santa.alt2} loading="lazy"><figcaption>${santa.attribution2}</figcaption></figure>
+            <nav class="return"><a id="return" href="#">❄ Return to Home ❄</a></div>
+            `;
+        }
+
+    });
+
+
+
+    const returnButton = document.getElementById("return");
+
+    returnButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        pageHeading.innerHTML = "Ho Ho Ho";
+        santaCard.innerHTML= `
+            <p id="santainfo">Santa Claus has a long history and many names. He is known in many cultures around the world and usually associated with Christmas. He travels to good children and give them gifts. There are various unpleasant "gifts" given for the naughty kids. To learn more about Santa, select a name from the menu above. </p>
+            <figure class="santaimage">
+                <img src="images/santaclausfigurine.webp" loading="lazy" width="640" height="496" alt="Santa figurine with bag of gifts">
+                <figcaption>Bear Figurine pic, Photo by <a href="https://unsplash.com/@mario015?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mario Amaral</a> on <a href="https://unsplash.com/photos/brown-bear-in-red-and-brown-coat-figurine-qk4_j6dWmzM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a></figcaption>
+            </figure>
+        `;
+    })};
+
+
+
 

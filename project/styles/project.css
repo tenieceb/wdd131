@@ -2,10 +2,8 @@
     --primary-color: #8E0003;
     --secondary-color: #405628;
     --tertiary-color: #E05C6F;
+    --quaternary-color:  #18300F;
     
-
-    --nav-hover-background-color:  #18300F;
-    --nav-link-color: white;
     --link-visited-color: #AED3D8;
 
     --font-family: "Josephin Slab";
@@ -23,6 +21,10 @@ body {
 
 h2 ,h3, p, a {
     font-family: var(--font-family);
+}
+
+p {
+    color:var(--font-color);
 }
 
 /* ----- heading ----- */
@@ -112,11 +114,13 @@ main{
     padding: 1rem;
     margin: .5rem 0 0 0;
     border-radius: 1rem;
-    border: .2rem dashed var(--nav-hover-background-color); 
+    border: .2rem dashed var(--quaternary-color);
+    align-content: center;
+    height: fit-content;
 }
 
 #indicator::before {
-    content: "▼";
+    content: "▽";
 }
 
 #santaloreheading {
@@ -124,9 +128,11 @@ main{
     color: var(--font-color);
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
+    margin:0;
 }
 
-.santalore a, #instruction {
+.santalore a{
     display: none;
 }
 
@@ -146,7 +152,8 @@ main{
 
 
 #indicator.showSantas::before {
-    content: "△";
+    content: "▲";
+    
 }
 
 /* ----- Santa info container ----- */
@@ -162,14 +169,16 @@ main{
     margin: 1rem 0 1rem 0;
 }
 
-#card2>h2 {
+
+
+#card2 h2 {
     grid-row: 1;
     grid-column: 1;
     margin: 0;
     text-align: center;
     padding: 1rem;
     color: var(--font-color);
-    text-shadow: 1px .8px var(--nav-hover-background-color) ;
+    text-shadow: 1px .8px var(--quaternary-color) ;
 }
 
 figure{
@@ -183,15 +192,15 @@ figure{
     align-self: center;
     max-width: 100%;
     height: auto;
-    border-radius: 40%;
-    box-shadow: 5px 5px 8px var(--nav-hover-background-color);
+    border-radius: 3rem;
+    box-shadow: 5px 5px 8px var(--quaternary-color);
     margin: .5rem 0 1rem 0;
 }
 
 .santaimage figcaption, figcaption a {
     text-decoration: none;
     font-family: var(--font-family);
-    color: var(--nav-hover-background-color);
+    color: var(--quaternary-color);
     color: var(--font-color);
     text-align: center;
     width: 10rem;
@@ -200,12 +209,33 @@ figure{
     cursor: pointer;
 }
 
-#santainfo {
+.santainfo {
     padding: 1rem;
     grid-column: 1;
     grid-row: 2;
     color: var(--font-color);
     text-indent: 2rem;
+}
+
+.light, #lighttheworld {
+    padding: 0 .5rem 0 .5rem;
+    grid-column: 1;
+    grid-row: 2;
+    color: var(--font-color);
+    text-align: center;
+}
+
+#origin, #jesus {
+    color: var(--font-color);
+    text-align: center;
+}
+
+#return{
+    display: flex;
+    text-decoration: none;
+    justify-content: space-evenly;
+    color: var(--font-color);
+    padding-bottom: 2rem;
 }
 
 /* -----Footer----- */
