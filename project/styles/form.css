@@ -39,7 +39,7 @@
     width:100%;
     max-width: 310px;
     margin: 0 auto;
-    color: var(--font-color);
+    color: var(--quaternary-color);
     font-size: 1rem;
     border-radius: 3px;
     padding: 2px 0 2px 0;
@@ -80,3 +80,35 @@
     width:100%;
     height:3rem;
 }
+
+@media (max-width: 600px) {
+    .santaform fieldset {
+      padding: 10px; 
+      margin-bottom: 10px;
+    }
+  
+    #writtenLetter {
+      min-height: 120px; 
+    }
+  
+    .santaform input[type="submit"] {
+      padding: 0.5rem;
+      height: 2.5rem;
+    }
+  }
+
+#lettertosanta {
+    margin-bottom: 15px; 
+  }
+  
+  #lettertosanta textarea {
+    width: 100%;
+    min-height: 150px;
+    margin-bottom: 10px; 
+  }
+  
+  .santaform input[type="submit"] {
+    display: block;      
+    width: 100%;         
+    margin-top: 10px;   
+  }
